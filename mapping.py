@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 class Map(object):
-    """This class create a representation of the robot environmet receving an
+    """This class create a representation of the autocar environmet receving an
     image of its map, the image is converted to a black and white image and then
     represented as a numpy array"""
 

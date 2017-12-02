@@ -22,7 +22,7 @@ class Bicycle(object):
         self.poses = [[], [], []]
     def getPose(self):
         """Return que actual pose of the model. The pose is in (x,y,theta) form"""
-        return self.poses[0][-1],self.poses[1][-1],self.poses[2][-1]
+        return self.poses[0][-1],self.poses[1][-1], self.poses[2][-1]
     def setPose(self,x,y,theta):
         """Define a new pose to the model"""
         self.x = x
@@ -59,13 +59,13 @@ class Bicycle(object):
     def sim_RandomPath(self,v,steps):
         """Simulate the model running with const speed (v in meters per step)
          and random steer angle for a number of steps"""
-        for i in xrange(steps):
+        for i in range(steps):
             alpha = random.uniform(-self.alpha_max,self.alpha_max)
             self.run(v,alpha)
     def sim_Path(self,v,alpha):
         """Simulate the path of the model using a list of speeds and angles,
         this lists should have the same length"""
-        for i in xrange(len(v)):
+        for i in range(len(v)):
             self.run(v[i],alpha[i])
     def __str__(self):
         return str(self.poses)
